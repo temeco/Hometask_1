@@ -1,16 +1,15 @@
 #include <iostream>
 using namespace std;
 
-float PosMoscowRing(float speed, float time) {
+int PosMoscowRing(float speed, int hours) {
 
-int temp = 0;
-float result = 0;
+    int result = 0;
 
-temp = (time*speed)/190;
+    result = speed*hours;
+    result = (result % 190 + 190) % 190;
 
-result = (time*speed) - (temp*190);
+    return result;
 
-return result;
 }
 
 
