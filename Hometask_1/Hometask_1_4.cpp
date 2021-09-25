@@ -1,8 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int SymmetricNumber(unsigned int a, unsigned int b, unsigned int c, unsigned int d) {
+int SymmetricNumber(int x) {
 
+    int a = x/1000;
+    int b = (x-a*1000)/100;
+    int c = (x - a*1000 - b*100)/10;
+    int d = x - a*1000 - b*100 - c*10;
     int product=0;
 
     // There are 4 possibilities that abcd is symmetric: 
@@ -24,6 +28,6 @@ int SymmetricNumber(unsigned int a, unsigned int b, unsigned int c, unsigned int
 
 int main() {
     cout << "The given numbers are symmetric, if integer 1 is printed: ";
-    cout << SymmetricNumber(0,0,0,1) << endl;;
+    cout << SymmetricNumber(33) << endl;;
     return 0;
 }

@@ -11,9 +11,9 @@ void Clock(int h, int m, int s, int passedseconds, int &returnH, int &returnM, i
     passedminutes = passedseconds/60;
     passedseconds = passedseconds - passedminutes*60;
 
-    returnH = (h+passedhours)%24;
-    returnM = (m+passedminutes)%60;
-    returnS = (s+passedseconds)%60;
+    returnH = (h + passedhours) % 24;
+    returnM = (m + passedminutes) % 60;
+    returnS = (s + passedseconds) % 60;
 
 return;
 }
