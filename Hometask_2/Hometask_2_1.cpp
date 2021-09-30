@@ -3,25 +3,13 @@ using namespace std;
 
 int phi (int n) {
 
-    int x1 = 0;
-    int x2 = 1;
-    int result = 0;
-    int i = 0;
-
-    if (n==0) {
-        result = 0;
+    if (n <= 1) {
+        return n;
     }
-    else if (n==1) {
-        result ==1;
-    }
-    
-    for (i=2; i <= n; i++) {
-        result = x1 + x2;
-        x1 = x2;
-        x2 = result;
+    else {
+        return phi(n-1)+phi(n-2);
     }
 
-    return result;
 }
 
 int main() {
