@@ -3,31 +3,28 @@
 
 using namespace std;
 
-void shortCuts(string str)
-{
-    int i = 0;
-    int l = str.length();
-
-	for (i = 0; i < l/2; i++) {
-        if (str[i] != str[l - 1 - i]) {
-            cout << str[i];
-       }
-    }
-    if (l % 2 != 0) {
-        cout << str[l/2];
-    }
-    for (i = l/2; i < l; i++) {
-        if (str[i] != str[l - 1 - i]) {
-            cout << str[i];
+void shortCuts(string& str, int index = 0)
+{ 
+	if (index*2 < str.length()) {
+        if (str[index] != str[str.length() - 1 - index]) {
+            cout << str[index];
+        }
+        shortCuts(str, index + 1);
+        if (index*2 + 1 == str.length()) {
+            cout << str[index];
+        }
+        if (str[index] != str[str.length() - 1 - index]) {
+            cout << str[str.length() - 1 - index];
         }
     }
+
+    return;
 	
 }
 
-int main() {
+int int main(int argc, char* argv[]) {
 
     string str = "";
-
     cout << "Please enter a string: ";
     cin >> str;
     cout << "The string without all symmetric positions is: ";

@@ -5,6 +5,11 @@ int* createArray(int n) {
 	return new int[n] { 0 };
 }
 
+void deleteArray(int* &arr) {
+    delete[] arr;
+    arr = nullptr;
+}
+
 int TopPosition(int* arr, int n) {
 
     int i = n - 1;
@@ -107,6 +112,10 @@ void HanoiTowersOdd (int n) {
     }
     }
 
+    deleteArray(A);
+    deleteArray(B);
+    deleteArray(C);
+
 }
 
 void HanoiTowersEven (int n) {
@@ -180,6 +189,10 @@ void HanoiTowersEven (int n) {
     k=k+1;
     }
     }
+
+    deleteArray(A);
+    deleteArray(B);
+    deleteArray(C);
 }
 
 void HanoiTowers (int n) {
@@ -193,10 +206,10 @@ void HanoiTowers (int n) {
 
 }
 
-int main() {
+int main(int argc, char* argv[]) {
 
 HanoiTowers(3);
 
-return 0;
+return EXIT_SUCCESS;
 
 }

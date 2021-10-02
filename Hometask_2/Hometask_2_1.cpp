@@ -7,12 +7,12 @@ int phi (int n) {
         return n;
     }
     else {
-        return phi(n-1)+phi(n-2);
+        return phi(n - 1) + phi(n - 2);
     }
 
 }
 
-int main() {
+int main(int argc, char* argv[]) {
 
     int n;
     
@@ -20,5 +20,5 @@ int main() {
     cin >> n;
     cout << "The " << n << ". Fibonacci number is: " << phi(n) << endl;
 
-    return 0;
+    return EXIT_SUCCESS;
 }
