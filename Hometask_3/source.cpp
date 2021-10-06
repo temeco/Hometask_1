@@ -1,8 +1,7 @@
 #include <iostream>
-#include"Vector3D.h"
+#include "Vector3D.h"
+
 using namespace std;
-
-
 
 int main() {
 
